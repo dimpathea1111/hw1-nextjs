@@ -20,6 +20,8 @@ export function CardSection({ title, description, image, price }: productType) {
         src={image}
         alt="Event cover"
         className="relative z-20 aspect-video w-full object-cover brightness-80"
+        width={100}
+        height={300}
       />
       <CardHeader>
         <CardAction>
