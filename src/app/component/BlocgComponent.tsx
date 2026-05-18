@@ -23,9 +23,8 @@
 //   );
 // }
 
-import { blogType } from "../lib/blog/blog_type";
+import { blogType } from "@/lib/blog/blog-type";
 import Image from "next/image";
-
 
 export default function BlogComponent({ profile, name, position }: blogType) {
     return (
