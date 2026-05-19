@@ -10,7 +10,7 @@ export default function Home() {
        < ProductCard/>   
 
        <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <CardSection
+        {/* <CardSection/> */}
        </main>
 
     <center className="font-2xl">Welcom to our website</center>
