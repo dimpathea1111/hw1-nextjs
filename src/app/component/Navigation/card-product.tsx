@@ -8,7 +8,7 @@ export default function ProductCard() {
       </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {[1, 2, 3, 4].map((item) => (
+        {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
           <div
             key={item}
             className="bg-white border p-4 shadow-sm hover:shadow-xl transition"
