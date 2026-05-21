@@ -8,7 +8,7 @@ export default function AddtoCarts() {
         <div className="min-h-screen flex items-center bg-amber-400 justify-center ">
             <div
                 className="bg-blue-900  p-8 w-80 text-center  shadow-[10px_10px_0px_rgba(0,0,0,0.4)]
-    hover:shadow-[15px_15px_0px_rgba(0,0,0,0.5)]
+    hover:shadow-[15px_15px_0px_rgba(0,0,0,0.5)]1
     transition-all duration-200
     hover:-translate-y-1 hover:-translate-x-1"
             >

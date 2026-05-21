@@ -11,7 +11,6 @@ export default function BlogComponent({ profile, name, position }: blogType) {
             loading="eager"
             />
             <hr />
-            {/* <p>Profile: {profile}</p> */}
             <p>Name: {name}</p>
             <p>Position: {position}</p>
         </>

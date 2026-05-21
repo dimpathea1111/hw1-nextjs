@@ -1,26 +1,69 @@
-"use client";
+// "use client";
 
+
+// import React, { useEffect, useState } from "react";
+// import BlogComponent from "../components/blogcomponents";
+
+// export default function BlogPage() {
+//   const [blog, setBlog] = useState([]);
+
+//   useEffect(() => {
+//     async function getAllBlog() {
+//       const res = await fetch(process.env.NEXT_PUBLIC_BASE_URL + "/posts");
+//       const data = await res.json();
+//       setBlog(data?.posts);
+//       return data;
+//     }
+//     getAllBlog();
+//   }, []);
+
+//   return (
+//     <div className="flex flex-wrap justify-center">
+//       {blog?.map(({ id, title, body }, _) => (
+//         <BlogComponent id={id} title={title} body={body} key={_} />
+//       ))}
+//     </div>
+//   );
+// }
+
+
+"use client";
 
 import React, { useEffect, useState } from "react";
 import BlogComponent from "../components/blogcomponents";
 
+interface Blog {
+  id: number;
+  title: string;
+  body: string;
+}
+
 export default function BlogPage() {
-  const [blog, setBlog] = useState([]);
+  const [blog, setBlog] = useState<Blog[]>([]);
 
   useEffect(() => {
     async function getAllBlog() {
-      const res = await fetch(process.env.NEXT_PUBLIC_BASE_URL + "/posts");
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/posts`
+      );
+
       const data = await res.json();
-      setBlog(data?.posts);
-      return data;
+
+      setBlog(data.posts);
     }
+
     getAllBlog();
   }, []);
 
   return (
-    <div className="flex flex-wrap justify-center">
-      {blog?.map(({ id, title, body }, _) => (
-        <BlogComponent id={id} title={title} body={body} key={_} />
+    <div className="flex flex-wrap justify-center gap-5 p-5">
+      {blog.map((item) => (
+        <BlogComponent
+          key={item.id}
+          id={item.id}
+          title={item.title}
+          body={item.body}
+        />
       ))}
     </div>
   );
